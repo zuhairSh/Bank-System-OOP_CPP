@@ -1,47 +1,46 @@
-# 🏦 Comprehensive Bank & Currency Management System
+# 🏦 Bank Management System (OOP)
 
-A production-ready, console-based desktop application written in **C++** that simulates a full-scale banking institution combined with a real-time currency exchange platform. This project showcases advanced software design, secure user authentication, financial transaction tracking, and object-oriented programming (OOP) at an elite level.
-
----
-
-## 🌟 Project Overview & Core Concept
-The purpose of this project is to provide a fully integrated system for managing a bank's daily operations. It allows bank employees (Users) to securely log in, manage client bank accounts, execute financial transactions (deposits, withdrawals, transfers), and perform multi-currency conversions using an integrated currency exchange engine. 
-
-All data is permanently saved and updated across sessions using structured flat-file databases.
+A comprehensive Banking Management System developed using **Object-Oriented Programming (OOP)** principles in C++. This system provides a secure and organized environment for managing client accounts and user permissions, while maintaining detailed logs of system operations.
 
 ---
 
-## ⚡ Key Features
+## ✨ Key Features
 
-### 👤 1. Full Client Management (CRUD)
-* **Create Accounts:** Easily open new bank accounts with secure validation.
-* **Search & Find:** Fast lookup for any client using their unique Account Number.
-* **Update & Delete:** Modify client information dynamically or close accounts with strict safety checks.
-* **Client Ledger:** Generate complete lists displaying all clients and their total balances.
+### 👥 Client Management
+* **CRUD Operations:** Full capability to Add, Update, and Delete client records.
+* **Search & Listing:** Find specific clients and view the complete client database.
+* **Financial Transactions:** Perform Deposits, Withdrawals, Transfers between accounts, and view total balances.
 
-### 💸 2. Financial Transactions Hub
-* **Deposits & Withdrawals:** Process direct cash deposits and withdrawals into client accounts seamlessly.
-* **Total Balances Report:** A dedicated overview showing the sum of all assets currently held in the bank.
-* **Secure P2P Transfers:** Transfer funds safely between two distinct bank accounts.
-* **Transfer Log Audit:** The system maintains an immutable history ledger capturing every single transfer operation (Sender, Receiver, Amount, and Timestamp) for accountability.
-
-### 🔐 3. User Authentication & Permissions System
-* **Secure Login Shield:** Restricts system access only to authorized employees with a tracking mechanism that logs login times and attempts.
-* **Granular Permissions:** Admins can grant or deny access to specific screens (e.g., an employee might have permission to deposit money but is blocked from deleting users or clients).
-
-### 💱 4. Advanced Currency Exchange Engine
-* **Global Currency Lookup:** View an updated list of international currencies with their official exchange rates relative to the US Dollar ($USD$).
-* **Live Currency Calculator:** Instantly convert amounts between any two international currencies using accurate, real-time logic.
-* **Rate Updater:** Seamlessly modify exchange rates directly from the administrative panel.
+### 🔐 User & Security System
+* **Secure Login:** Includes a login screen with a 3-attempt security lockout mechanism.
+* **User Management:** Full CRUD operations for system users.
+* **Permissions System:** An advanced access control system that restricts or grants access to specific screens based on the user's role.
+* **Login Register:** Tracks login history (successful and failed attempts), including timestamps and user IDs.
+* **Data Protection:** Implementation of security measures for both users and clients.
+* **Currency Exchange:** A dedicated module to view, search, and update currency exchange rates, as well as calculate and compare currency values relative to the USD.
 
 ---
 
-## 🧠 Technical Highlights & Concepts Used
-* **Bulletproof Input Validation:** The system is completely crash-proof. Every numeric entry, date, or character input is automatically checked using advanced C++ templates to reject invalid inputs.
-* **Strict Object-Oriented Design (OOP):** Deep implementation of Encapsulation, Polymorphism, and Multi-level Inheritance to ensure the code is modular and clean.
-* **Architecture:** Adheres to a strict "One Class, One File" architectural pattern, splitting the business logic completely away from UI screens.
+## 🛠️ OOP Concepts Applied
+
+* **Inheritance:** Utilizes base and derived classes (e.g., `clsScreen` as the base class for UI elements).
+* **Encapsulation:** Protects data integrity by managing access modifiers (`private`, `protected`, `public`).
+* **Abstraction:** Simplifies complex operations by hiding implementation details behind clean interfaces.
+* **Separation of Concerns:** Clearly separates the User Interface (UI) logic from the core Business Logic.
 
 ---
 
-## 🧑‍💻 Development Context
-This system represents the ultimate capstone project of the **ProgrammingAdvices Roadmap (Level 11)**, engineered under the guidance of **Dr. Mohammed Abu-Hadhoud**.
+## 📂 Project Structure
+
+* **`main.cpp`**: The entry point of the application.
+* **`clsScreen.h`**: The base class for all UI screens, ensuring consistent design, headers, and navigation.
+* **`clsMainScreen.h`**: The central hub from which all other system screens branch out.
+* **`clsBankClient.h` & `clsUser.h`**: Core classes responsible for processing data for clients and users, including file handling.
+
+---
+
+## 🚀 How to Run
+
+### Prerequisites
+* A compiler supporting **C++11** or later (e.g., GCC, Clang, or Visual Studio).
+
